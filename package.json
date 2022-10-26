@@ -13,8 +13,7 @@
     "test:debug:local": "CYPRESS_ENV=localhost npm run test:debug",
     "test:debug:prod": "CYPRESS_ENV=production npm run test:debug",
     "test:debug": "cypress run --headed --browser chrome --env TAGS='@e2e-test' --spec 'cypress/integration/**/*.feature'",
-    "test:pull-features": "git submodule update --remote gherkin-features && cp -rf gherkin-features/* cypress/integration && node ./scripts/remove-old-features.js",
-    "prepare": "husky install"
+    "test:pull-features": "git submodule update --remote gherkin-features && cp -rf gherkin-features/* cypress/integration && node ./scripts/remove-old-features.js"
   },
   "author": "",
   "license": "Private",
@@ -28,18 +27,26 @@
   },
   "devDependencies": {
     "eslint": "^7.15.0",
+    "husky": "^4.3.5",
+    "lint-staged": "^10.5.3",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.2.0",
-    "husky": "^8.0.1",
-    "lint-staged": "^10.5.3"
+    "eslint-plugin-prettier": "^3.2.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "*.js": "eslint --cache --fix"
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
   },
   "keywords": []
 }

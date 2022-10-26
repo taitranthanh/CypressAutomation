@@ -5,6 +5,5 @@
   "reporterOptions": {
     "mochaFile": "test-results/test-output-[hash].xml"
   },
-  "chromeWebSecurity": false,
-  "nonGlobalStepDefinitions": true
+  "chromeWebSecurity": false
 }

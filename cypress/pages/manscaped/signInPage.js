@@ -1,4 +1,3 @@
-
 class signInPage {
   static inputEmail(email) {
     cy.xpath(`//*[@id='main']//*[@name='email']`).type(email);

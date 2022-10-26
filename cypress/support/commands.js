@@ -1,4 +1,5 @@
-
+import cy from "cypress";
+import Cypress from "cypress";
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -24,6 +25,6 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
-Cypress.Commands.add('getByDataTestId', (selector) => {
-  return cy.get(`[data-testid=${selector}]`);
+Cypress.Commands.add("getByDataTestId", (selector) => {
+  return cy.get(`*[data-testid=${selector}]`);
 });
