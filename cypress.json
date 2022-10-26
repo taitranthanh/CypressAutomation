@@ -1,0 +1,10 @@
+{
+  "baseUrl": "https://www.manscaped.com/",
+  "ignoreTestFiles": ["*.js", "*.md"],
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "test-results/test-output-[hash].xml"
+  },
+  "chromeWebSecurity": false,
+  "nonGlobalStepDefinitions": true
+}
