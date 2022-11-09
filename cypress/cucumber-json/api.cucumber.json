@@ -1,0 +1,536 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "API testing",
+    "line": 2,
+    "id": "api-testing",
+    "tags": [
+      {
+        "name": "@API",
+        "line": 1
+      }
+    ],
+    "uri": "api.feature",
+    "elements": [
+      {
+        "id": "api-testing;test-connectibity",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "Test connectibity",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test1",
+            "line": 4
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "Client is sends GET API to check test connectibity",
+            "result": {
+              "status": "passed",
+              "duration": 2186000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "API is shows 200 status code",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;check-server-time",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "Check server time",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test2",
+            "line": 9
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 11,
+            "name": "Client is sends GET API to check server time",
+            "result": {
+              "status": "passed",
+              "duration": 508000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "API is shows 200 status code",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "API results is shows server time",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;could-not-get-trade-with-invalid-symbol",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "Could not get TRADE with invalid symbol",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test3",
+            "line": 15
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 17,
+            "name": "Client is sends GET trade API with invalid symbol",
+            "result": {
+              "status": "passed",
+              "duration": 514000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 18,
+            "name": "API is shows 400 status code",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 19,
+            "name": "Response message is shows invalid symbol",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 20,
+            "name": "API status message is shows Bad Request",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;verify-user-is-able-to-get-trade-information-for-valid-symbol",
+        "keyword": "Scenario",
+        "line": 23,
+        "name": "Verify user is able to get Trade information for valid symbol",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test4",
+            "line": 22
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "Client is sends GET trade API with valid symbol",
+            "result": {
+              "status": "passed",
+              "duration": 499000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "API is shows 200 status code",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;verify-user-could-not-create-a-user",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Verify user could not create a user",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test5",
+            "line": 27
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "Client is sends POST API to create a user",
+            "result": {
+              "status": "passed",
+              "duration": 486000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 30,
+            "name": "API is shows 401 status code",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "API response message is invalid token",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;verify-user-could-not-send-pai-request-without-authentication",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "Verify user could not send PAI request without authentication",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test6",
+            "line": 33
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "Client is sends POST API without authentication",
+            "result": {
+              "status": "passed",
+              "duration": 524000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "API is shows 400 status code",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 37,
+            "name": "API response message is invalid token",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "API status message is shows Bad Request",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;verify-user-could-not-send-pai-request-with-invalid-authentication",
+        "keyword": "Scenario",
+        "line": 41,
+        "name": "Verify user could not send PAI request with invalid authentication",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test7",
+            "line": 40
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 42,
+            "name": "Client is sends POST API with invalid authentication",
+            "result": {
+              "status": "passed",
+              "duration": 1602000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 43,
+            "name": "API is shows 403 status code",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "Response message is show provided API key is not correct",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;verify-user-is-able-to-get-wallet-address",
+        "keyword": "Scenario",
+        "line": 47,
+        "name": "Verify user is able to get wallet address",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test8",
+            "line": 46
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 48,
+            "name": "Client is sends GET API to get wallet address",
+            "result": {
+              "status": "passed",
+              "duration": 302000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 49,
+            "name": "API is shows 200 status code",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 50,
+            "name": "Wallet address is shows correctly",
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;verify-user-is-able-to-get-invalid-asset",
+        "keyword": "Scenario",
+        "line": 53,
+        "name": "Verify user is able to get invalid asset",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test9",
+            "line": 52
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 54,
+            "name": "Client is sends GET API to get asset",
+            "result": {
+              "status": "passed",
+              "duration": 288000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 55,
+            "name": "API is shows 200 status code",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;verify-user-is-able-to-hash-message",
+        "keyword": "Scenario",
+        "line": 58,
+        "name": "Verify user is able to hash message",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test10",
+            "line": 57
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 59,
+            "name": "Client is sends POST API to hash",
+            "result": {
+              "status": "passed",
+              "duration": 291000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 60,
+            "name": "API is shows 200 status code",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "api-testing;verify-user-is-able-to-get-wallet-balance",
+        "keyword": "Scenario",
+        "line": 63,
+        "name": "Verify user is able to get wallet balance",
+        "tags": [
+          {
+            "name": "@API",
+            "line": 1
+          },
+          {
+            "name": "@test11",
+            "line": 62
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 64,
+            "name": "Client is sends POST API to get wallet balance",
+            "result": {
+              "status": "passed",
+              "duration": 294000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 65,
+            "name": "API is shows 200 status code",
+            "result": {
+              "status": "passed",
+              "duration": 3000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 66,
+            "name": "Wallet balance is showing correctly",
+            "result": {
+              "status": "passed",
+              "duration": 2000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

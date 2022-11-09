@@ -1,0 +1,27 @@
+[{
+    "context": "Email and password are empty",
+    "email": "",
+    "password": "",
+    "message": "Enter your email address"
+  },
+  {
+    "context": "Email is empty only",
+    "email": "",
+    "password": "12345678x@X",
+    "message": "You can't leave this empty"
+  }
+  ,
+  {
+    "context": "Password is empty only",
+    "email": "tthanhtaicntt@gmail.com",
+    "password": "",
+    "message": "You can't leave this empty"
+  }  ,
+  {
+    "context": "Email is invalid length",
+    "email": "test",
+    "password": "12345678x@X",
+    "message": "The length of the Phone or Email should be 6-60 characters."
+  }
+  ]
+  

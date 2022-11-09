@@ -1,0 +1,68 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Validation Sign In Page",
+    "line": 1,
+    "id": "validation-sign-in-page",
+    "tags": [],
+    "uri": "signIn.feature",
+    "elements": [
+      {
+        "id": "validation-sign-in-page;testing-login-function",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Testing login function",
+        "tags": [
+          {
+            "name": "@Testing1",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User is open url 'https://www.manscaped.com/login'",
+            "result": {
+              "status": "passed",
+              "duration": 20387000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User is input email and password",
+            "result": {
+              "status": "passed",
+              "duration": 19495000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "User is click sign in button",
+            "result": {
+              "status": "passed",
+              "duration": 664000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Validate error message",
+            "result": {
+              "status": "failed",
+              "duration": 102000000,
+              "error_message": "Error: Syntax error, unrecognized expression: p:contains['Cannot find a user with this email and password combo.']\n    at Sizzle.error (https://www.manscaped.com/__cypress/runner/cypress_runner.js:91864:8)\n    at Sizzle.tokenize (https://www.manscaped.com/__cypress/runner/cypress_runner.js:92516:11)\n    at Sizzle.select (https://www.manscaped.com/__cypress/runner/cypress_runner.js:92943:20)\n    at Function.Sizzle [as find] (https://www.manscaped.com/__cypress/runner/cypress_runner.js:91168:9)\n    at jQuery.fn.init.find (https://www.manscaped.com/__cypress/runner/cypress_runner.js:93199:11)\n    at new jQuery.fn.init (https://www.manscaped.com/__cypress/runner/cypress_runner.js:93314:40)\n    at Object.query (https://www.manscaped.com/__cypress/runner/cypress_runner.js:169335:10)\n    at $Cy.$$ (https://www.manscaped.com/__cypress/runner/cypress_runner.js:147901:65)\n    at getElements (https://www.manscaped.com/__cypress/runner/cypress_runner.js:143115:20)\nFrom previous event:\n    at resolveElements (https://www.manscaped.com/__cypress/runner/cypress_runner.js:143165:67)\n    at Context.get (https://www.manscaped.com/__cypress/runner/cypress_runner.js:143176:14)\n    at wrapped (https://www.manscaped.com/__cypress/runner/cypress_runner.js:157179:43)\n    at <unknown> (https://www.manscaped.com/__cypress/runner/cypress_runner.js:155929:15)\nFrom previous event:\n    at CommandQueue.runCommand (https://www.manscaped.com/__cypress/runner/cypress_runner.js:155907:17)\n    at next (https://www.manscaped.com/__cypress/runner/cypress_runner.js:156060:19)\n    at <unknown> (https://www.manscaped.com/__cypress/runner/cypress_runner.js:156089:16)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

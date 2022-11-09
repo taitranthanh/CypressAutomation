@@ -1,0 +1,58 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Validation",
+    "line": 1,
+    "id": "validation",
+    "tags": [],
+    "uri": "coderPush.feature",
+    "elements": [
+      {
+        "id": "validation;checking-who-we-are-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Checking Who we are page",
+        "tags": [
+          {
+            "name": "@Test",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User is access to coderPush website",
+            "result": {
+              "status": "passed",
+              "duration": 2762000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User is click on 'Who we are' menu",
+            "result": {
+              "status": "passed",
+              "duration": 380000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "Who we are page information is displayed",
+            "result": {
+              "status": "failed",
+              "duration": 14055000000,
+              "error_message": "AssertionError: Timed out retrying after 4000ms: expected '<h1.text-[#00FF00].font-dohyeon.md:text-7xl.text-6xl.my-5>' to be 'visible'\n\nThis element `<h1.text-[#00FF00].font-dohyeon.md:text-7xl.text-6xl.my-5>` is not visible because its parent `<div>` has CSS property: `opacity: 0`\n    at coderPushPage.verifyWhoWeAreTitleIsDisplayed (cypress/pages/coderPush/coderPushPage.js:42:43)\n    at Context.eval (cypress/integration/coderPush/coderPush-functions.js:16:14)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

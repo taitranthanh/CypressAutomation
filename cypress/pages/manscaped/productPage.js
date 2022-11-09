@@ -18,7 +18,7 @@ class productPage {
   }
 
   static selectProductQuantity(quantity) {
-    cy.xpath(`//div[@data-state='open']//option[@value='{quantity}']`).click();
+    cy.xpath(`//div[@data-state='open']//option[@value='${quantity}']`).click();
   }
 
   static clickAddToCartBtn() {

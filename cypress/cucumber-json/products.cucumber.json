@@ -1,0 +1,161 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Validation product page",
+    "line": 1,
+    "id": "validation-product-page",
+    "tags": [],
+    "uri": "products.feature",
+    "elements": [
+      {
+        "id": "validation-product-page;user-is-able-to-add-product-to-cart",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "User is able to add product to cart",
+        "tags": [
+          {
+            "name": "@Testing2",
+            "line": 2
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User is open url 'https://www.manscaped.com/'",
+            "result": {
+              "status": "failed",
+              "duration": 10294000000,
+              "error_message": "CypressError: Timed out after waiting `10000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `10000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.js` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://www.manscaped.com/__cypress/runner/cypress_runner.js:140945:74)\n    at <unknown> (https://www.manscaped.com/__cypress/runner/cypress_runner.js:142166:16)\nFrom previous event:\n    at Context.visit (https://www.manscaped.com/__cypress/runner/cypress_runner.js:142165:61)\n    at wrapped (https://www.manscaped.com/__cypress/runner/cypress_runner.js:157179:43)\nFrom Your Spec Code:\n    at mainPage.navigate (cypress/pages/manscaped/mainPage.js:6:7)\n    at Context.eval (cypress/integration/manscaped/products/products-functions.js:6:11)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User is select product 'The Platinum Package 4.0'",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "User is select size XL and quantity 3",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User is click add to cart button",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "productName"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "The Platinum Package 4.0"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Product is added to cart",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      },
+      {
+        "id": "validation-product-page;user-is-able-to-add-sets-product-to-cart",
+        "keyword": "Scenario",
+        "line": 12,
+        "name": "User is able to add sets product to cart",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 13,
+            "name": "User is open url 'https://www.manscaped.com/'",
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://www.manscaped.com/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: read ECONNRESET\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n    at <unknown> (https://www.manscaped.com/__cypress/runner/cypress_runner.js:142127:82)\n    at visitFailedByErr (https://www.manscaped.com/__cypress/runner/cypress_runner.js:141429:12)\n    at <unknown> (https://www.manscaped.com/__cypress/runner/cypress_runner.js:142126:11)\nFrom previous event:\n    at go (https://www.manscaped.com/__cypress/runner/cypress_runner.js:142088:17)\n    at <unknown> (https://www.manscaped.com/__cypress/runner/cypress_runner.js:142158:20)\nFrom previous event:\n    at visit (https://www.manscaped.com/__cypress/runner/cypress_runner.js:142156:38)\n    at Context.visit (https://www.manscaped.com/__cypress/runner/cypress_runner.js:142165:14)\n    at wrapped (https://www.manscaped.com/__cypress/runner/cypress_runner.js:157179:43)\nFrom Your Spec Code:\n    at mainPage.navigate (cypress/pages/manscaped/mainPage.js:6:7)\n    at Context.eval (cypress/integration/manscaped/products/products-functions.js:6:11)\n    at Context.resolveAndRunStepDefinition (node_modules/cypress-cucumber-preprocessor/lib/resolveStepDefinition.js:193:0)\n    at Context.eval (node_modules/cypress-cucumber-preprocessor/lib/createTestFromScenario.js:27:0)\n\nFrom Node.js Internals:\n  Error: read ECONNRESET\n      at TLSWrap.onStreamRead (node:internal/stream_base_commons:217:20)"
+            }
+          },
+          {
+            "arguments": [
+              {
+                "rows": [
+                  {
+                    "cells": [
+                      "productName"
+                    ]
+                  },
+                  {
+                    "cells": [
+                      "The Buff Bundle"
+                    ]
+                  }
+                ]
+              }
+            ],
+            "keyword": "When ",
+            "line": 14,
+            "name": "User is select set product",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 17,
+            "name": "User is select quantity 3",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "User is click add to cart button",
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 19,
+            "name": "Product 'The Buff Bundle' is added to cart",
+            "result": {
+              "status": "skipped"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
